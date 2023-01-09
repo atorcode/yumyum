@@ -1,0 +1,11 @@
+.heading {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 3.25rem;
+  color: white;
+  // -webkit-text-stroke: 1px black;
+  text-shadow: 1px 1px black;
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+}

@@ -1,14 +1,32 @@
 .search-bar-container {
-  padding-top: 30vh;
-  text-align: center;
+  position: absolute;
+  margin: auto;
+  left: 50%;
+  top: 30%;
+  transform: translateX(-50%);
 }
 
 // probably use media queries to change size of search bar at certain size breakpoints
 .search-bar {
-  width: 25rem;
-  height: 2rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 30rem;
+  height: 2.5rem;
+  background-color: white;
+  border: 1px solid gray;
+  border-radius: 5px;
 }
 
-.search-bar::placeholder {
-  padding-left: 0.5rem;
+.search-icon {
+  margin-left: 0.5rem;
+}
+
+.search-bar-field {
+  height: 100%;
+  width: 90%;
+  margin-left: 0.5rem;
+  border: none;
+  outline: none;
+  font-size: 1.2rem;
 }
