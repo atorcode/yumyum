@@ -1,0 +1,14 @@
+.search-bar-container {
+  padding-top: 30vh;
+  text-align: center;
+}
+
+// probably use media queries to change size of search bar at certain size breakpoints
+.search-bar {
+  width: 25rem;
+  height: 2rem;
+}
+
+.search-bar::placeholder {
+  padding-left: 0.5rem;
+}
