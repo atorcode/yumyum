@@ -1,6 +1,7 @@
 import "./App.scss";
 import Hero from "./components/Hero";
 import Footer from "./components/Footer";
+import RecipeCard from "./components/RecipeCard";
 // import axios from "axios";
 
 import { useEffect, useState } from "react";
@@ -23,7 +24,9 @@ function App() {
   return (
     <div className="App">
       <Hero />
-      <div className="placeholder-body"></div>
+      {/* <div className="placeholder-body"></div> */}
+      {/* Render RecipeCard here to test how it looks */}
+      <RecipeCard />
       <Footer />
     </div>
   );
