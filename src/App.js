@@ -2,31 +2,31 @@ import "./App.scss";
 import Hero from "./components/Hero";
 import Footer from "./components/Footer";
 import RecipeCard from "./components/RecipeCard";
-// import axios from "axios";
+import axios from "axios";
 
 import { useEffect, useState } from "react";
 
 function App() {
-  // const [data, setData] = useState(null);
+  const [recipe, setRecipe] = useState(null);
 
-  // useEffect(() => {
-  //   axios
-  //     .get(
-  //       `https://api.spoonacular.com/recipes/random?apiKey=${process.env.REACT_APP_API_KEY}`
-  //     )
-  //     .then((res) => {
-  //       console.log(res);
-  //       console.log(res.data);
-  //       setData(res.data);
-  //     });
-  // }, []);
+  useEffect(() => {
+    // random recipe for testing
+    axios
+      .get(
+        `https://api.spoonacular.com/recipes/random?apiKey=${process.env.REACT_APP_API_KEY}`
+      )
+      .then((res) => {
+        setRecipe(res.data.recipes[0]);
+      });
+  }, []);
 
   return (
     <div className="App">
       <Hero />
       {/* <div className="placeholder-body"></div> */}
       {/* Render RecipeCard here to test how it looks */}
-      <RecipeCard />
+      {recipe && console.log(recipe)}
+      {recipe && <RecipeCard {...recipe} />}
       <Footer />
     </div>
   );
