@@ -1,7 +1,11 @@
 import styles from "./RecipeCardMainImage.module.scss";
 
-const RecipeCardMainImage = () => {
-  return <div>RecipeCardMainImage</div>;
+const RecipeCardMainImage = ({ title, image }) => {
+  return (
+    <section className={styles["image-section"]}>
+      <img src={image} alt={title} />
+    </section>
+  );
 };
 
 export default RecipeCardMainImage;
