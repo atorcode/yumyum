@@ -9,8 +9,10 @@ const RecipeCard = ({
   title,
   servings,
   readyInMinutes,
+  extendedIngredients,
   image,
   analyzedInstructions,
+  creditsText,
 }) => {
   return (
     // may change section tag to main later depending on which page it's rendered in
@@ -20,10 +22,10 @@ const RecipeCard = ({
         servings={servings}
         readyInMinutes={readyInMinutes}
       />
-      <RecipeCardIngredients />
+      <RecipeCardIngredients extendedIngredients={extendedIngredients} />
       <RecipeCardMainImage title={title} image={image} />
       <RecipeCardSteps analyzedInstructions={analyzedInstructions} />
-      <RecipeCardAttribution />
+      <RecipeCardAttribution creditsText={creditsText} />
     </article>
   );
 };

@@ -6,7 +6,7 @@ const RecipeCardSteps = ({ analyzedInstructions }) => {
     <section className={styles["step-section"]}>
       {steps.map((detailedStep) => {
         return (
-          <p id={detailedStep.number}>
+          <p key={detailedStep.number}>
             {detailedStep.number}. {detailedStep.step}
           </p>
         );

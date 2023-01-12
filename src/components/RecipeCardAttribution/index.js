@@ -1,3 +1,3 @@
-import RecipeCardAttribution from "./RecipeCardAttribute";
+import RecipeCardAttribution from "./RecipeCardAttribution";
 
 export default RecipeCardAttribution;
