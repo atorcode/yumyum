@@ -1,0 +1,9 @@
+.ingredients {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.ingredients figure {
+  text-align: center;
+}

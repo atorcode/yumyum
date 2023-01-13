@@ -1,5 +1,6 @@
 import styles from "./RecipeCardIngredients.module.scss";
 
+// not working
 const RecipeCardIngredients = ({ extendedIngredients }) => {
   const removeDuplicates = (arr) => {
     const result = [];
@@ -11,10 +12,24 @@ const RecipeCardIngredients = ({ extendedIngredients }) => {
     return result;
   };
 
+  // need a regex that will take ingredient image and replace spaces with hyphens
   return (
-    <section>
+    <section className={styles["ingredients"]}>
       {removeDuplicates(extendedIngredients).map((ingredient) => {
-        return <p key={ingredient.id}>{ingredient.name}</p>;
+        return (
+          <figure key={ingredient.id}>
+            <img
+              src={`https://spoonacular.com/cdn/ingredients_100x100/${ingredient.image.replace(
+                " ",
+                "-"
+              )}`}
+              alt={ingredient.name}
+              width="50"
+              height="50"
+            />
+            <figcaption>{ingredient.name}</figcaption>
+          </figure>
+        );
       })}
     </section>
   );
