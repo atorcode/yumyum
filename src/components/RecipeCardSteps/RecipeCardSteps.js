@@ -1,5 +1,5 @@
 import styles from "./RecipeCardSteps.module.scss";
-
+import NumberIcon from "../NumberIcon";
 const RecipeCardSteps = ({ analyzedInstructions }) => {
   let steps;
   if (analyzedInstructions.length < 1) {
@@ -19,9 +19,13 @@ const RecipeCardSteps = ({ analyzedInstructions }) => {
       {steps &&
         steps.map((detailedStep) => {
           return (
-            <p key={detailedStep.number}>
-              {detailedStep.number}. {detailedStep.step}
-            </p>
+            <div
+              className={styles["individual-step"]}
+              key={detailedStep.number}
+            >
+              <NumberIcon number={detailedStep.number} />
+              <p>{detailedStep.step}</p>
+            </div>
           );
         })}
     </section>

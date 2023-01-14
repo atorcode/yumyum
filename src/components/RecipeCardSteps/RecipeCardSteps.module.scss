@@ -1,5 +1,14 @@
 .step-section {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
   width: 80%;
   font-size: 0.8rem;
   font-weight: bold;
+}
+
+.individual-step {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
 }

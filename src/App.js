@@ -26,7 +26,9 @@ function App() {
       {/* <div className="placeholder-body"></div> */}
       {/* Render RecipeCard here to test how it looks */}
       {recipe && console.log(recipe)}
-      {recipe && <RecipeCard {...recipe} />}
+      <section className="recipe-card-section">
+        {recipe && <RecipeCard {...recipe} />}
+      </section>
       <Footer />
     </div>
   );

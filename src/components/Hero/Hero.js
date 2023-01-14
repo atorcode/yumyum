@@ -7,7 +7,6 @@ const Hero = () => {
   return (
     <section className={styles["hero"]}>
       <HeroImage />
-
       <HeroHeading />
       <SearchBar />
     </section>
