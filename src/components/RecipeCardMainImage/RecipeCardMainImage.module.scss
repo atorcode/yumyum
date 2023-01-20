@@ -1,9 +1,11 @@
 .image-section {
-  height: 15rem;
+  height: 360px;
+  width: 360px;
+  clip-path: path(var(--heart));
 }
 
-// Turn into heart shape
 .image-section img {
   height: 100%;
-  border-radius: 50%;
+  // breaks clip-path
+  // transform: scale(0.5);
 }
