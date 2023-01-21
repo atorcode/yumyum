@@ -1,7 +1,7 @@
 import "./App.scss";
 import Hero from "./components/Hero";
 import Footer from "./components/Footer";
-import RecipeCard from "./components/RecipeCard";
+import RecipeCard from "./features/RecipeCard";
 import axios from "axios";
 
 import { useEffect, useState } from "react";

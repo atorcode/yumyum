@@ -1,9 +1,9 @@
 import styles from "./RecipeCard.module.scss";
-import RecipeCardHeader from "../RecipeCardHeader";
-import RecipeCardIngredients from "../RecipeCardIngredients";
-import RecipeCardMainImage from "../RecipeCardMainImage";
-import RecipeCardSteps from "../RecipeCardSteps";
-import RecipeCardAttribution from "../RecipeCardAttribution";
+import RecipeCardHeader from "./RecipeCardHeader";
+import RecipeCardIngredients from "./RecipeCardIngredients";
+import RecipeCardMainImage from "./RecipeCardMainImage";
+import RecipeCardSteps from "./RecipeCardSteps";
+import RecipeCardAttribution from "./RecipeCardAttribution";
 
 const RecipeCard = ({
   title,

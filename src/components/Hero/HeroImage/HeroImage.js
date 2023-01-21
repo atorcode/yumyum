@@ -1,4 +1,4 @@
-import heroImage from "../../media/pexels-pixabay-45202.jpg";
+import heroImage from "../../../media/pexels-pixabay-45202.jpg";
 import styles from "./HeroImage.module.scss";
 const HeroImage = () => {
   return (

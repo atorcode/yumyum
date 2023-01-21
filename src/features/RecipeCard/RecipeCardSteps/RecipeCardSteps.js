@@ -1,5 +1,5 @@
 import styles from "./RecipeCardSteps.module.scss";
-import NumberIcon from "../NumberIcon";
+import NumberIcon from "../../../components/NumberIcon";
 const RecipeCardSteps = ({ analyzedInstructions }) => {
   let steps;
   if (analyzedInstructions.length < 1) {

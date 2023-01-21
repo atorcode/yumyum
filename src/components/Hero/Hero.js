@@ -1,6 +1,6 @@
-import HeroImage from "../HeroImage";
-import HeroHeading from "../HeroHeading";
-import SearchBar from "../SearchBar";
+import HeroImage from "./HeroImage";
+import HeroHeading from "./HeroHeading";
+import SearchBar from "../../features/SearchBar";
 import styles from "./Hero.module.scss";
 
 const Hero = () => {

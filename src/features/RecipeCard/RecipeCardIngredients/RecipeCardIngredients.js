@@ -12,7 +12,6 @@ const RecipeCardIngredients = ({ extendedIngredients }) => {
     return result;
   };
 
-  // need a regex that will take ingredient image and replace spaces with hyphens
   return (
     <section className={styles["ingredients"]}>
       {removeDuplicates(extendedIngredients).map((ingredient) => {
