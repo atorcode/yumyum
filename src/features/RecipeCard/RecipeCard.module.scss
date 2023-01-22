@@ -7,9 +7,10 @@
   align-items: center;
   justify-content: flex-start;
   gap: 1rem;
-  margin: auto;
   width: 600px;
   background-color: white;
   // border: 1px solid rgba(0, 0, 0, 0.2);
   // box-shadow: 2px 2px 2px 3px rgba(0, 0, 0, 0.2);
+  border: 50px solid;
+  border-image: url(../../media/vintage-g8015467e7_1280.png) 120;
 }
