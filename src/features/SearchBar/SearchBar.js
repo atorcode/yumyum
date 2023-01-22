@@ -2,6 +2,8 @@ import styles from "./SearchBar.module.scss";
 import { useState } from "react";
 import { FaSearch } from "react-icons/fa";
 
+import { fetchRecipes } from "./searchBarSlice";
+
 import axios from "axios";
 
 const SearchBar = () => {
@@ -9,15 +11,18 @@ const SearchBar = () => {
   const [data, setData] = useState(null);
 
   const handleSubmit = () => {
-    axios
-      .get(
-        `https://api.spoonacular.com/recipes/complexSearch?query=${query}&apiKey=${process.env.REACT_APP_API_KEY}`
-      )
-      .then((res) => {
-        console.log(res);
-        console.log(res.data);
-        setData(res.data);
-      });
+    fetchRecipes(
+      `https://api.spoonacular.com/recipes/complexSearch?query=${query}&apiKey=${process.env.REACT_APP_API_KEY}`
+    );
+    // axios
+    //   .get(
+    //     `https://api.spoonacular.com/recipes/complexSearch?query=${query}&apiKey=${process.env.REACT_APP_API_KEY}`
+    //   )
+    //   .then((res) => {
+    //     console.log(res);
+    //     console.log(res.data);
+    //     setData(res.data);
+    //   });
   };
 
   return (

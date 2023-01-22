@@ -18,10 +18,14 @@ const RecipeCardIngredients = ({ extendedIngredients }) => {
         return (
           <figure key={ingredient.id}>
             <img
-              src={`https://spoonacular.com/cdn/ingredients_100x100/${ingredient.image.replace(
-                " ",
-                "-"
-              )}`}
+              src={
+                ingredient.image.includes(" ")
+                  ? `https://spoonacular.com/cdn/ingredients_100x100/${ingredient.image.replace(
+                      " ",
+                      "-"
+                    )}`
+                  : `https://spoonacular.com/cdn/ingredients_100x100/${ingredient.image}`
+              }
               alt={ingredient.name}
               width="50"
               height="50"
