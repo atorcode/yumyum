@@ -15,7 +15,6 @@ const RecipeCardSteps = ({ analyzedInstructions }) => {
   }
   return (
     <section className={styles["step-section"]}>
-      {console.log(steps)}
       {steps &&
         steps.map((detailedStep) => {
           return (

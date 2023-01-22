@@ -5,7 +5,7 @@ const RecipeCardIngredients = ({ extendedIngredients }) => {
   const removeDuplicates = (arr) => {
     const result = [];
     arr.forEach((item) => {
-      if (!result.includes(item.name)) {
+      if (!result.some((enteredItem) => enteredItem.id === item.id)) {
         result.push(item);
       }
     });
@@ -17,19 +17,21 @@ const RecipeCardIngredients = ({ extendedIngredients }) => {
       {removeDuplicates(extendedIngredients).map((ingredient) => {
         return (
           <figure key={ingredient.id}>
-            <img
-              src={
-                ingredient.image.includes(" ")
-                  ? `https://spoonacular.com/cdn/ingredients_100x100/${ingredient.image.replace(
-                      " ",
-                      "-"
-                    )}`
-                  : `https://spoonacular.com/cdn/ingredients_100x100/${ingredient.image}`
-              }
-              alt={ingredient.name}
-              width="50"
-              height="50"
-            />
+            {ingredient.image && (
+              <img
+                src={
+                  ingredient.image.includes(" ")
+                    ? `https://spoonacular.com/cdn/ingredients_100x100/${ingredient.image.replace(
+                        " ",
+                        "-"
+                      )}`
+                    : `https://spoonacular.com/cdn/ingredients_100x100/${ingredient.image}`
+                }
+                alt={ingredient.name}
+                width="50"
+                height="50"
+              />
+            )}
             <figcaption>{ingredient.name}</figcaption>
           </figure>
         );
